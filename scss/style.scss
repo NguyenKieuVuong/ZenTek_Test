@@ -1,0 +1,426 @@
+body {
+  font-family: "Barlow Semi Condensed", system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 14px;
+  background-color: #131415;
+}
+img {
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(/fonts/NeueHaasDisplayXXThin.ttf) format("ttf");
+}
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url(/fonts/NeueHaasDisplayXXThinItalic.ttf) format("ttf");
+}
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(/fonts/NeueHaasDisplayXThin.ttf) format("ttf");
+}
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url(/fonts/NeueHaasDisplayXThinItalic.ttf) format("ttf");
+}
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/NeueHaasDisplayRoman.ttf) format("ttf");
+}
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/NeueHaasDisplayRomanItalic.ttf) format("ttf");
+}
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts/NeueHaasDisplayMediu.ttf) format("ttf");
+}
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts/NeueHaasDisplayMediumItalic.ttf) format("ttf");
+}
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/NeueHaasDisplayBold.ttf) format("ttf");
+}
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/NeueHaasDisplayBoldItalic.ttf) format("ttf");
+}
+.header-menu {
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  background-color: #131415;
+  .container-fluid {
+    padding: 0;
+  }
+  .navbar-brand {
+    img {
+      height: 32px;
+    }
+  }
+  .navbar-collapse {
+    min-height: calc(100vh - 60px);
+    background-color: #1f2023;
+    margin-top: 1rem;
+  }
+  .navbar-nav {
+    //padding: 1rem 0;
+    margin-top: 0.5rem;
+    padding: 7px 1.5rem;
+
+    .nav-link {
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 3rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      text-align: center;
+      &.active,
+      &.show {
+        background-color: #383a42;
+        color: #ffc700;
+      }
+    }
+  }
+
+  .navbar-toggler {
+    -webkit-transition: all 0.25s;
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+    .navbar-toggler-icon {
+      background-image: none;
+      width: 24px;
+      height: 3px;
+      border-radius: 1rem;
+      &:before,
+      &:after {
+        border-radius: 1rem;
+        -webkit-transition: all 0.25s;
+        width: 24px;
+        height: 3px;
+        left: 0;
+        background: rgba(255, 255, 255, 0.8);
+        position: absolute;
+        content: "";
+      }
+      &:after {
+        width: 24px;
+      }
+    }
+    &.collapsed {
+      .navbar-toggler-icon {
+        -webkit-transform: rotate(0deg);
+        -webkit-transition: all 0.25s;
+
+        background-color: rgba(255, 255, 255, 0.8);
+
+        &:before {
+          -webkit-transform: rotate(0deg);
+          top: -10px;
+        }
+        &:after {
+          width: 16px;
+          -webkit-transform: rotate(0deg);
+          top: 10px;
+        }
+      }
+    }
+
+    .navbar-toggler-icon {
+      -webkit-transform: rotate(180deg);
+      background-color: transparent;
+      left: 10px;
+
+      &:before,
+      &:after {
+        top: 0px;
+      }
+      &:before {
+        -webkit-transform: rotate(45deg);
+      }
+      &:after {
+        -webkit-transform: rotate(-45deg);
+      }
+    }
+  }
+}
+.btn-login {
+  border-radius: 3rem;
+  background-color: #ffc700;
+  padding: 7px 1.5rem;
+  color: #1f1f1f;
+  font-weight: 900;
+  font-style: italic;
+  border: 1px solid #ffc700;
+  text-align: center;
+  &:hover {
+    background-color: #c79b12;
+    color: #1f1f1f;
+    border: 1px solid #c79b12;
+  }
+}
+.btn-outline-login {
+  border-radius: 3rem;
+  background-color: #131415;
+  padding: 7px 1.5rem;
+  color: #d2d2d2;
+  font-weight: 900;
+  font-style: italic;
+  border: 1px solid #ffc700;
+  text-align: center;
+  &:hover {
+    border: 1px solid #ffe8ab;
+    color: #d2d2d2;
+  }
+}
+
+#slide-main {
+  .owl-item {
+    img {
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      height: 180px;
+    }
+  }
+  .owl-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    .owl-dot {
+      span {
+        width: 16px;
+        height: 4px;
+            margin: 5px 2px;
+        background: rgba(255, 255, 255, 0.6);
+      }
+      &.active,
+      &:hover {
+        span {
+          background: #ffc700;
+        }
+      }
+    }
+  }
+}
+.block-icon {
+  background-color: #1f2023;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.icon-list {
+  display: flex;
+  justify-content: space-between;
+  .icon-item {
+    text-align: center;
+    &__title {
+      color: #fff;
+      text-transform: uppercase;
+    }
+    &__img {
+      img {
+        width: 42px;
+        height: 42px;
+        object-fit: contain;
+        object-position: center;
+      }
+    }
+  }
+}
+#slide-collection {
+  .owl-dots {
+    display: none;
+  }
+  .owl-item {
+    img {
+      object-fit: cover;
+      object-position: center;
+      width: 180px;
+      height: 245px;
+      border-radius: 0.75rem;
+    }
+  }
+}
+.block-slide-collection {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+.block-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  .slide-title {
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 900;
+    color: #ffc700;
+    text-transform: uppercase;
+  }
+  .nav-collection {
+    display: flex;
+    .btn-nav {
+      cursor: pointer;
+      &.btn-next {
+        margin-left: 0.5rem;
+      }
+      img {
+        width: 40px;
+        height: 40px;
+        display: block;
+      }
+    }
+  }
+}
+.block-slide-banner {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+#slide-calendar {
+  .owl-dots {
+    display: none;
+  }
+  .owl-item {
+    img {
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      height: 240px;
+      border-radius: 0.75rem;
+    }
+  }
+}
+
+.box-banner {
+  &__img {
+    img {
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      width: 100%;
+      height: 240px;
+      object-position: center;
+      border-radius: 0.75rem;
+    }
+  }
+}
+.footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid #383a42;
+}
+.footer-item {
+  &__title {
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 900;
+    margin-bottom: 0.25rem;
+  }
+  &__row {
+    color: #d2d2d2;
+    padding: 0.25rem;
+    font-family: "Neue Haas Grotesk", "Barlow Semi Condensed", system-ui,
+      -apple-system, "Segoe UI", Roboto, "Helvetica Neue";
+    .btn-footer {
+      margin-top: 1rem;
+      padding: 0;
+      img {
+        display: block;
+        height: 44px;
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .header-menu {
+    padding: 12px 0;
+    position: unset;
+    background-color: #131415;
+    .container-fluid {
+      padding: 0 1rem;
+    }
+    .navbar-brand {
+      img {
+        height: 40px;
+      }
+    }
+    .navbar-collapse {
+      min-height: unset;
+      background-color: transparent;
+      margin-top: 0;
+    }
+    .navbar-nav {
+      padding: 0;
+      margin-top: 0;
+
+      .nav-link {
+        padding: 0.5rem 1rem;
+        border-radius: 3rem;
+        &:hover {
+          background-color: #383a42;
+          color: #ffc700;
+        }
+      }
+    }
+  }
+  #slide-main {
+  .owl-item {
+    img {
+      width: 100%;
+      height: 450px;
+    }
+  }
+  .owl-dots {
+    bottom: 10px;
+    .owl-dot {
+      span {
+        width: 28px;
+        height: 4px;
+         margin: 5px 4px;
+      }
+      
+    }
+  }
+}
+}
+@media (min-width: 992px) {
+}
