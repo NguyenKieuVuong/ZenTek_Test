@@ -110,6 +110,8 @@ img {
       font-weight: 500;
       text-transform: uppercase;
       text-align: center;
+      font-family: "Neue Haas Grotesk", "Barlow Semi Condensed", system-ui,
+        -apple-system, "Segoe UI", Roboto, "Helvetica Neue";
       &.active,
       &.show {
         background-color: #383a42;
@@ -205,6 +207,7 @@ img {
   font-style: italic;
   border: 1px solid #ffc700;
   text-align: center;
+  width: 105px;
   &:hover {
     border: 1px solid #ffe8ab;
     color: #d2d2d2;
@@ -229,7 +232,7 @@ img {
       span {
         width: 16px;
         height: 4px;
-            margin: 5px 2px;
+        margin: 5px 2px;
         background: rgba(255, 255, 255, 0.6);
       }
       &.active,
@@ -243,8 +246,7 @@ img {
 }
 .block-icon {
   background-color: #1f2023;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
 }
 .icon-list {
   display: flex;
@@ -252,6 +254,8 @@ img {
   .icon-item {
     text-align: center;
     &__title {
+      font-family: "Neue Haas Grotesk", "Barlow Semi Condensed", system-ui,
+        -apple-system, "Segoe UI", Roboto, "Helvetica Neue";
       color: #fff;
       text-transform: uppercase;
     }
@@ -287,8 +291,9 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.625rem;
   .slide-title {
+    margin: 0;
     font-size: 2rem;
     font-style: italic;
     font-weight: 900;
@@ -342,7 +347,7 @@ img {
   }
 }
 .footer {
-  padding-top: 2rem;
+  padding-top: 2.5rem;
   padding-bottom: 2rem;
   border-top: 1px solid #383a42;
 }
@@ -376,9 +381,11 @@ img {
     position: unset;
     background-color: #131415;
     .container-fluid {
-      padding: 0 1rem;
+      padding: 0 25px;
     }
     .navbar-brand {
+      margin-left: 14px;
+      margin-right: 23px;
       img {
         height: 40px;
       }
@@ -393,7 +400,8 @@ img {
       margin-top: 0;
 
       .nav-link {
-        padding: 0.5rem 1rem;
+        margin-right: 5px;
+        padding: 0.5rem 25px;
         border-radius: 3rem;
         &:hover {
           background-color: #383a42;
@@ -401,26 +409,89 @@ img {
         }
       }
     }
+    .btn-login {
+      margin-right: 6px;
+    }
   }
   #slide-main {
-  .owl-item {
-    img {
-      width: 100%;
-      height: 450px;
-    }
-  }
-  .owl-dots {
-    bottom: 10px;
-    .owl-dot {
-      span {
-        width: 28px;
-        height: 4px;
-         margin: 5px 4px;
+    .owl-item {
+      img {
+        width: 100%;
+        height: 450px;
       }
-      
+    }
+    .owl-dots {
+      bottom: 2px;
+      .owl-dot {
+        span {
+          width: 28px;
+          height: 4px;
+          margin: 5px 4px;
+        }
+      }
     }
   }
-}
+  .btn-login {
+    border-radius: 3rem;
+    background-color: #ffc700;
+    padding: 7px 1.5rem;
+    color: #1f1f1f;
+    font-weight: 900;
+    font-style: italic;
+    border: 1px solid #ffc700;
+    text-align: center;
+    width: 112px;
+  }
+  .btn-outline-login {
+    border-radius: 3rem;
+    padding: 7px 1.5rem;
+    width: 106px;
+  }
+  .block-icon {
+    padding: 22px 0;
+  }
+  .icon-list {
+    .icon-item {
+      &__title {
+        padding-top: 10px;
+      }
+      &__img {
+        img {
+          height: 44px;
+        }
+      }
+    }
+  }
+  .block-slide-collection {
+    padding-top: 5.5rem;
+    padding-bottom: 2rem;
+  }
+  .block-slide-banner {
+    padding-top: 53px;
+    padding-bottom: 82px;
+  }
+  .block-title {
+    margin-bottom: 0.625rem;
+    .slide-title {
+      font-size: 2rem;
+    }
+    .nav-collection {
+      .btn-nav {
+        &.btn-next {
+          margin-left: 0.5rem;
+        }
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+  }
 }
 @media (min-width: 992px) {
 }

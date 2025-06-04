@@ -63,7 +63,7 @@
             </a>
           </div>
           <div class="d-md-none" bis_skin_checked="1">
-            <a href="#" class="btn btn-login me-2"> SIGN UP</a>
+            <a href="#" class="btn btn-login"> SIGN UP</a>
             <a href="#" class="btn btn-outline-login"> LOGIN </a>
           </div>
           <div
@@ -75,13 +75,13 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
-              <li class="nav-item"><a href="#" class="nav-link">Item1</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Item2</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Item3</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Item4</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Items1</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Items2</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Items3</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Items4</a></li>
             </ul>
             <div class="d-none d-md-block" bis_skin_checked="1">
-              <a href="#" class="btn btn-login me-2"> SIGN UP</a>
+              <a href="#" class="btn btn-login "> SIGN UP</a>
               <a href="#" class="btn btn-outline-login"> LOGIN </a>
             </div>
           </div>
@@ -213,10 +213,10 @@
             <div class="block-title">
               <h4 class="slide-title">NFT Drops Calendar</h4>
               <div class="nav-collection">
-                <div id="nav-collection-prev" class="btn-nav btn-prev">
+                <div id="nav-calendar-prev" class="btn-nav btn-prev">
                   <img src="/images/btn-slide-prev.png" alt="" />
                 </div>
-                <div id="nav-collection-next" class="btn-nav btn-next">
+                <div id="nav-calendar-next" class="btn-nav btn-next">
                   <img src="/images/btn-slide-next.png" alt="" />
                 </div>
               </div>
@@ -352,11 +352,18 @@
           autoplayTimeout: 4000,
           autoplayHoverPause: true,
         });
-        $("#slide-calendar").owlCarousel({
+        var owlCalendar = $("#slide-calendar");
+        owlCalendar.owlCarousel({
           loop: false,
           items: 1,
           nav: false,
           autoplay: false,
+        });
+        $("#nav-calendar-next").click(function () {
+          owlCalendar.trigger("next.owl.carousel");
+        });
+        $("#nav-calendar-prev").click(function () {
+          owlCalendar.trigger("prev.owl.carousel");
         });
         var owlCollection = $("#slide-collection");
         owlCollection.owlCarousel({
