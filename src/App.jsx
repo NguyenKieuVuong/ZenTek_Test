@@ -1,6 +1,3 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/style.scss";
 import "./assets/js/jquery-3.5.1.min.js";
@@ -14,11 +11,9 @@ import SlideCalendar from "./components/SlideCalendar";
 import SlideCollections from "./components/SlideCollections";
 import Aoe from "aoejs";
 
-const aoe = new Aoe();
-aoe.init();
 function App() {
-  //const [count, setCount] = useState(0);
-
+  const aoe = new Aoe();
+  aoe.init();
   return (
     <>
       <Header />
@@ -56,9 +51,8 @@ function App() {
           </div>
         </div>
       </section>
-     
-        <Footer  />
-      
+
+      <Footer />
     </>
   );
 }
