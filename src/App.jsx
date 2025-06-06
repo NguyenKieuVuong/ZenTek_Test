@@ -23,16 +23,16 @@ function App() {
   return (
     <>
       <Header />
-      <section className="block-slide" data-aoe="popIn">
+      <section className="block-slide" data-aos="ease-in">
         <SlideMain />
       </section>
-      <section className="block-icon" data-aoe="popIn">
+      <section className="block-icon" data-aos="ease-in">
         <div className="container">
           <BelowIcon />
         </div>
       </section>
 
-      <section className="block-slide-collection" data-aoe="popIn">
+      <section className="block-slide-collection" data-aos="ease-in">
         <div className="container">
           <SlideCollections />
         </div>
@@ -41,16 +41,16 @@ function App() {
       <section className="block-slide-banner">
         <div className="container">
           <div className="row">
-            <div className="col-md-6" data-aoe="fadeInLeft">
+            <div className="col-md-6" data-aos="fade-left">
               <SlideCalendar />
             </div>
-            <div className="col-6 col-md-3" data-aoe="fadeInRight">
+            <div className="col-6 col-md-3" data-aos="fade-right">
               <BannerHotNFT />
             </div>
             <div
               className="col-6 col-md-3"
-              data-aoe="fadeInRight"
-              data-aoe-delay="100"
+              data-aos="fade-right"
+              data-aos-delay="300"
             >
               <BannerPromotion />
             </div>
