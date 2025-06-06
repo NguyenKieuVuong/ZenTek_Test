@@ -1,6 +1,6 @@
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/Logo.png";
 
 function Header() {
   return (
