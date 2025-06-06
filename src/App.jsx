@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/style.scss";
 import "./assets/js/jquery-3.5.1.min.js";
@@ -12,8 +13,10 @@ import SlideCollections from "./components/SlideCollections";
 import Aoe from "aoejs";
 
 function App() {
-  const aoe = new Aoe();
-  aoe.init();
+  useEffect(() => {
+    const aoe = new Aoe();
+    aoe.init();
+  }, []);
   return (
     <>
       <Header />
