@@ -10,12 +10,15 @@ import BelowIcon from "./components/BelowIcon";
 import SlideMain from "./components/SlideMain";
 import SlideCalendar from "./components/SlideCalendar";
 import SlideCollections from "./components/SlideCollections";
-import Aoe from "aoejs";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
   useEffect(() => {
-    const aoe = new Aoe();
-    aoe.init();
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
   }, []);
   return (
     <>
