@@ -1,6 +1,6 @@
 
 
-Live https://zen-tek-test-git-master-nguyenkieuvuongs-projects.vercel.app
+Live https://zen-tek-test.vercel.app
 
 # React + Vite
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
